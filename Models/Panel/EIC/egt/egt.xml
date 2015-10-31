@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>egt.ac</path>
+
+    <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+     <object-name>vitre</object-name>
+  </effect>
+
+  <animation>
+    <object-name>fond</object-name>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <object-name>needle2</object-name>
+
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>shader.png</texture>
+    <object-name>vitre</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>face</object-name>
+    <object-name>needle</object-name>
+    <object-name>needle2</object-name>
+    <emission>
+      <red>   0.03125 </red>
+      <green> 0.00890 </green>
+      <blue>  0.00890 </blue>
+      <factor-prop>systems/electrical/outputs/instrument-lights</factor-prop>
+    </emission>
+  </animation>
+
+  <animation>
+    <type>alpha-test</type>
+    <alpha-factor> 0.05 </alpha-factor>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <property>engines/engine/oil-temp</property>
+    <interpolation>
+      <entry><ind>  0.10 </ind><dep>   119 </dep></entry>
+      <entry><ind>  0.30 </ind><dep>  129 </dep></entry>
+      <entry><ind> 0.997 </ind><dep> 202 </dep></entry>
+    </interpolation>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>needle2</object-name>
+    <property>engines/engine/itt-norm</property>
+    <interpolation>
+      <entry><ind>  0.0 </ind><dep>   0 </dep></entry>
+      <entry><ind> 1.0 </ind><dep> 3600 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> 0.000 </x-m>
+      <y-m> 0.085 </y-m>
+      <z-m> 0.000 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
+

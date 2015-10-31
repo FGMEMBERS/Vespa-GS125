@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+  <!-- Glass cockpit -->
+  <model>
+    <path>Aircraft/Vespa-GS125/Models/Panel/glass-cockpit/eadi.xml</path>
+    <offsets>
+      <x-m> -0.632 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 0.89 </z-m>
+     <roll-deg>     0.0 </roll-deg>
+      <pitch-deg>   -20.0 </pitch-deg>
+      <heading-deg>  0.0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Vespa-GS125/Models/Panel/EIC/n1/rpm.xml</path>
+    <offsets>
+      <x-m> -0.616 </x-m>
+      <y-m> -0.100 </y-m>
+      <z-m> 0.83 </z-m>
+     <roll-deg>     0.0 </roll-deg>
+      <pitch-deg>   -18.0 </pitch-deg>
+      <heading-deg>  0.0 </heading-deg>
+    </offsets>
+  </model>
+
+<model>
+    <path>Aircraft/Vespa-GS125/Models/Panel/EIC/egt/egt.xml</path>
+    <offsets>
+      <x-m> -0.616 </x-m>
+      <y-m> -0.134 </y-m>
+      <z-m> 0.83 </z-m>
+     <roll-deg>     0.0 </roll-deg>
+      <pitch-deg>   -18.0 </pitch-deg>
+      <heading-deg>  0.0 </heading-deg>
+    </offsets>
+  </model>
+
+<model>
+    <path>Aircraft/Vespa-GS125/Models/Panel/EIC/oil-pr/oilpressure.xml</path>
+    <offsets>
+      <x-m> -0.60 </x-m>
+      <y-m> -0.130 </y-m>
+      <z-m>  0.735 </z-m>
+     <roll-deg>     0.0 </roll-deg>
+      <pitch-deg>   -18.0 </pitch-deg>
+      <heading-deg>  0.0 </heading-deg>
+    </offsets>
+  </model>
+  
+</PropertyList>
+

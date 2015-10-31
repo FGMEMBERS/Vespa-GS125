@@ -149,6 +149,26 @@
     <offset>1.25</offset>
    </pitch>
   </wind>
+
+     <horn>
+   <name>horn</name>
+   <mode>looped</mode>
+   <path>Aircraft/Vespa-GS125/Sounds/horn.wav</path>
+   <property>/controls/horn/horn</property>
+    <volume>
+    <property>/orientation/alpha-deg</property>
+    <type>log</type>
+    <min>1.0</min>
+    <max>1.5</max>
+   </volume>
+    <position>
+     <x>0.62</x>
+     <y>0.0</y>
+     <z>-0.23</z>
+    </position>
+    <reference-dist>100.0</reference-dist>
+    <max-dist>500.0</max-dist>
+  </horn>
  
 <!-- no binding yet?
   <click>

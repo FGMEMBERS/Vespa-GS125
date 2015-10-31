@@ -26,6 +26,68 @@
     </offsets>
   </model>
 
+  <!-- Rembrandt lighting effects -->
+
+   <model>
+    <path>Aircraft/Vespa-GS125/Models/Lights/HeadLight.xml</path>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
+    <offsets>
+      <x-m> -0.523 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.84 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -3 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Vespa-GS125/Models/Lights/HeadLight-rembrandt.xml</path>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <offsets>
+       <x-m> -0.523 </x-m>
+       <y-m>  0.000 </y-m>
+       <z-m>  0.84 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg> -3 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Vespa-GS125/Models/Lights/TailLight.xml</path>
+    <condition>
+      <not><property>sim/rendering/rembrandt/enabled</property></not>
+    </condition>
+    <offsets>
+      <x-m> 1.043 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m>  0.182 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Vespa-GS125/Models/Lights/TailLight-rembrandt.xml</path>
+    <condition>
+      <property>sim/rendering/rembrandt/enabled</property>
+    </condition>
+    <offsets>
+      <x-m> 1.043 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m>  0.182 </z-m>
+      <roll-deg>    0 </roll-deg>
+      <pitch-deg>   0 </pitch-deg>
+      <heading-deg> 0 </heading-deg>
+    </offsets>
+  </model>
+
 
  <!-- handlebars-steering -->
 
@@ -135,16 +197,14 @@
   <object-name>throttlegrip</object-name>
   <property>/controls/engines/engine/throttle</property>
   <factor>95</factor>
-  <center>
-	<x-m> -0.2955 </x-m>
-	<y-m> 0.3102 </y-m>
-	<z-m> 0.8145 </z-m>
-  </center>
- <axis>
-   <x>0.377</x>
-   <y>1</y>
-   <z>-0.0893</z>
-  </axis>
+  <axis>
+      <x1-m>  -0.32498 </x1-m>
+      <y1-m>  0.2491 </y1-m>
+      <z1-m>  0.8226 </z1-m>
+      <x2-m> -0.2753 </x2-m>
+      <y2-m>  0.3673 </y2-m>
+      <z2-m>  0.8127 </z2-m>
+    </axis>
  </animation>
 
  
@@ -163,9 +223,9 @@
     <entry><ind>1.0</ind><dep>-24</dep></entry>
   </interpolation>  
   <center>
-   <x-m> -0.91</x-m>
+   <x-m> -0.9177</x-m>
    <y-m> 0.00</y-m>
-   <z-m>-0.01</z-m>
+   <z-m>-0.00752</z-m>
   </center>
   <axis>
    <x>0.0</x>
@@ -233,9 +293,9 @@
     <entry><ind>1.0</ind><dep>-10</dep></entry>
   </interpolation>  
   <center>
-   <x-m> 0.41</x-m>
+   <x-m> 0.4873</x-m>
    <y-m> 0.00</y-m>
-   <z-m>0.068</z-m>
+   <z-m>0.048</z-m>
   </center>
   <axis>
    <x>0.0</x>
@@ -274,9 +334,9 @@
   <property>/controls/engines/engine/starter</property>
   <factor>-33</factor>
   <center>
-	<x-m>  0.7597 </x-m>
-	<y-m> 0.0697 </y-m>
-	<z-m> 0.032 </z-m>
+	<x-m>  0.7546 </x-m>
+	<y-m> 0.1497 </y-m>
+	<z-m> 0.03082 </z-m>
   </center>
  <axis>
    <x>0.0</x>
@@ -293,9 +353,9 @@
   <type>spin</type>
   <factor>30</factor>
   <center>
-   <x-m> -0.8224</x-m>
+   <x-m> -0.8175</x-m>
    <y-m> 0.0</y-m>
-   <z-m>-0.0682</z-m>
+   <z-m>-0.0632</z-m>
   </center>
   <axis>
    <x>0</x>
@@ -310,9 +370,9 @@
   <type>spin</type>
   <factor>30</factor>
   <center>
-   <x-m> 0.7215</x-m>
+   <x-m> 0.71605</x-m>
    <y-m> 0.0</y-m>
-   <z-m>-0.08</z-m>
+   <z-m>-0.07503</z-m>
   </center>
   <axis>
    <x>0.0</x>
@@ -427,20 +487,6 @@
     <condition>
       <not>
         <property>/controls/switches/starter</property>
-      </not>
-    </condition>
-  </animation>
-
-<animation>
-    <type>select</type>
-    <object-name>frontgear</object-name>
-    <object-name>maingear</object-name>
-    <condition>
-      <not>
-        <equals>
-          <property>gear/gear[0]/position-norm</property>
-          <value> 0 </value>
-        </equals>
       </not>
     </condition>
   </animation>

@@ -115,6 +115,10 @@
         <name>g or button 2 on joystick</name>
         <desc>rider's leg lower</desc>
       </key>
+	  <key>
+        <name>k/K</name>
+        <desc>Lights</desc>
+      </key>
     <text> ***Vespa-GS125 riding instructions***
 
   This Scooter is a 1960's era, Italian made two strokes per engine cycle 125 cc (7.5 cu in )engined scooter popular in both the USA and in the rest of the world.
@@ -162,13 +166,34 @@
 			</aerotow>
 		</hitches>
 
+  	<multiplay>
+	 <generic>
+	  <int n="1" alias="/instrumentation/airspeed-indicator/indicated-speed-kt"/> <!-- speedometer --> 
+	  <int n="2" alias="/controls/engines/engine/magnetos"/> <!-- key switch --> 
+	  <int n="3" alias="/systems/electrical/outputs/instrument-lights"/> <!--turn left--> 
+	  <int n="4" alias="/controls/engines/engine/starter"/> <!-- kickstarter --> 
+	  <float n="5" alias="/controls/gear/brake-left"/> <!-- brake --> 
+	  <int n="6" alias="/controls/gear/brake-right"/> <!-- lamp -->
+	  <float n="7" alias="/controls/engines/engine/throttle"/> <!-- throttle -->
+	  <int n="8" alias="/engines/engine/running"/> <!-- engine -->
+	  <int n="9" alias="/controls/horn/horn"/> <!-- horn -->
+	  <float n="10" alias="/gear/gear[0]/rollspeed-ms"/> <!-- wheel rotation -->
+	  <float n="11" alias="/gear/gear[1]/rollspeed-ms"/> <!-- wheel rotation -->
+	  <float n="12" alias="/gear/gear[0]/compression-norm"/> <!-- wheel supension -->
+	  <float n="13" alias="/gear/gear[1]/compression-norm"/> <!-- wheel supension-->
+	  <float n="14" alias="/controls/flight/aileron"/> <!-- wheel steering -->
+	  <float n="15" alias="/engines/engine/rpm"/> <!-- rpm -->
+        <float n="16" alias="/engines/engine/clutch"/> <!-- clutch -->
+	 </generic>
+	</multiplay>
 
-<weight n="0">
-      <name>Pilot</name>
-      <weight-lb>130</weight-lb>
-      <max-lb>190</max-lb>
-      <min-lb>100</min-lb>
-    </weight>
+
+      <weight n="0">
+        <name>Pilot</name>
+        <weight-lb>130</weight-lb>
+        <max-lb>190</max-lb>
+        <min-lb>100</min-lb>
+      </weight>
 
   </sim>
 
@@ -182,7 +207,15 @@
 	</controls>
 
 	<input>
-		<keyboard>
+		<keyboard>	
+     <key n="75">
+       <name>K</name>
+       <desc>Headlight</desc>
+       <binding>
+        <command>property-toggle</command>
+        <property>controls/lighting/headlamp</property>
+	 </binding>
+ 	</key> 
 			<key n="23">
 			<name>Ctrl-w</name>
 			<desc>Place Winch 40m in front of vehicle</desc>
